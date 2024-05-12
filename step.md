@@ -99,9 +99,14 @@ apt install sudo
 usermod -aG sudo [username]
 ```
 
+### Sudo configuration
+
+## 3. Add strict password rules
+
 ## Document
 
 - [Configuration SSH Server - Linuxtricks.fr](https://www.linuxtricks.fr/wiki/ssh-installer-et-configurer-un-serveur-ssh)
 - [SELinux](https://www.redhat.com/fr/topics/linux/what-is-selinux)
 - [AppArmor](https://doc.ubuntu-fr.org/apparmor)
 - [Configure UFW](https://www.tecmint.com/setup-ufw-firewall-on-ubuntu-and-debian/)
+- [Password rule](https://www.server-world.info/en/note?os=Debian_12&p=pam&f=1)
