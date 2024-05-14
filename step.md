@@ -101,7 +101,44 @@ usermod -aG sudo [username]
 
 ### Sudo configuration
 
-f
+> **Modify `/etc/sudoers` file configuration**
+
+- Password tries limit
+
+```bash
+Defaults  passwd_tries=3
+```
+
+- Default bad pass message
+
+```bash
+Defaults  badpass_message="message"
+```
+
+- Define LogFile
+
+```bash
+Defaults logfile="/var/log/sudo/sudo.log"
+```
+
+- Log input, output and define log dir
+
+```bash
+Defaults log_input, log_output
+Defaults iolog_dir="/var/log/sudo"
+```
+
+- Activate TTY
+
+```bash
+Defaults requiretty
+```
+
+- Set secure PATH
+
+```bash
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+```
 
 ## 3. Add strict password rules
 
@@ -111,7 +148,7 @@ f
 apt install libpam-pwquality
 ```
 
-### Configuration
+### Enable and Configure pwquality
 
 > **Modify `/etc/login.defs` file configuration**
 
@@ -171,4 +208,5 @@ difok 7
 - [SELinux](https://www.redhat.com/fr/topics/linux/what-is-selinux)
 - [AppArmor](https://doc.ubuntu-fr.org/apparmor)
 - [Configure UFW](https://www.tecmint.com/setup-ufw-firewall-on-ubuntu-and-debian/)
+- [Sudo configuration](https://www.tecmint.com/sudoers-configurations-for-setting-sudo-in-linux/)
 - [Password rule](https://www.server-world.info/en/note?os=Debian_12&p=pam&f=1)
