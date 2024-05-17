@@ -21,6 +21,8 @@ user_log_in=$(who -u | wc -l)
 ip_addr=$(hostname -I | awk '{print $1}')
 mac_addr=$(ip link | awk '{ if($1 == "link/ether") print $2}')
 
+cmd_sudo=$(journalctl -q | grep 'sudo' | grep 'COMMAND' | wc -l)
+
 echo "#Architecture:    $architecture"
 echo "#CPU physical:    $physical_cpu"
 echo "#vCPU:            $virtual_cpu"
@@ -32,4 +34,4 @@ echo "#Last boot:       $last_boot"
 echo "#Connexions TCP:  $connexions_tcp"
 echo "#User log:        $user_log_in"
 echo "#IPv4:            $ip_addr        #MAC:   $mac_addr"
-# cmd with sudo
+echo "#Sudo:            $cmd_sudo"

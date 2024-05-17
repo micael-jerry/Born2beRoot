@@ -215,3 +215,4 @@ difok 7
 - [Cron](https://www.linuxtricks.fr/wiki/cron-et-crontab-le-planificateur-de-taches)
 - [use awk](https://www.malekal.com/comment-utiliser-la-commande-awk-avec-des-exemples/)
 - [Check disk space linux](https://phoenixnap.com/kb/linux-check-disk-space)
+- [LVM](https://doc.ubuntu-fr.org/lvm)
