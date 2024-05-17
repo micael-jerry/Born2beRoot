@@ -15,7 +15,13 @@ usage_rate_disk=$(df -h / | awk '{ if($6 == "/") print $5}')
 
 last_boot=$(uptime -s)
 
-connexions_tcp=$(w -h | wc -l)
+lvm_count=$(lsblk | grep 'lvm' | wc -l)
+lvm_is_active="no"
+if [ "$lvm_count" -gt 0 ]; then
+        lvm_is_active="yes"
+fi
+
+connexions_tcp=$(netstat --tcp | grep 'ESTABLISHED' | wc -l)
 user_log_in=$(who -u | wc -l)
 
 ip_addr=$(hostname -I | awk '{print $1}')
@@ -30,8 +36,8 @@ echo "#Memory usage:    $used_mem/$total_mem Mb ($usage_rate_mem %)"
 echo "#Disk usage:      $used_disk/$total_disk ($usage_rate_disk)"
 # usage cpu rate
 echo "#Last boot:       $last_boot"
-# lvm is actif ?
-echo "#Connexions TCP:  $connexions_tcp"
+echo "#LVM use: $lvm_is_active"
+echo "#TCP:             $connexions_tcp ESTABLISHED"
 echo "#User log:        $user_log_in"
 echo "#IPv4:            $ip_addr        #MAC:   $mac_addr"
 echo "#Sudo:            $cmd_sudo"
