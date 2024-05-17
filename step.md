@@ -4,7 +4,7 @@
 
 - passphrase: #MFIDIMAL
 - login:
-  - mfidimal - #MFIDIMAL
+  - mfidimal - Born2BeRoot
   - root - #MFIDIMAL
 
 ## 1. Install and configure ssh
