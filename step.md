@@ -202,6 +202,8 @@ usercheck 1
 difok 7
 ```
 
+## 4. Monitoring
+
 ## Document
 
 - [Configuration SSH Server - Linuxtricks.fr](https://www.linuxtricks.fr/wiki/ssh-installer-et-configurer-un-serveur-ssh)
@@ -210,3 +212,6 @@ difok 7
 - [Configure UFW](https://www.tecmint.com/setup-ufw-firewall-on-ubuntu-and-debian/)
 - [Sudo configuration](https://www.tecmint.com/sudoers-configurations-for-setting-sudo-in-linux/)
 - [Password rule](https://www.server-world.info/en/note?os=Debian_12&p=pam&f=1)
+- [Cron](https://www.linuxtricks.fr/wiki/cron-et-crontab-le-planificateur-de-taches)
+- [use awk](https://www.malekal.com/comment-utiliser-la-commande-awk-avec-des-exemples/)
+- [Check disk space linux](https://phoenixnap.com/kb/linux-check-disk-space)
